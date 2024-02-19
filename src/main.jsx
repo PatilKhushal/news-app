@@ -15,7 +15,7 @@ import PageNotFound from './components/Page Not Found/PageNotFound';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Root/>} errorElement={<PageNotFound/>}>
+    <Route path='./' element={<Root/>} errorElement={<PageNotFound/>}>
       <Route index element={<Home/>} loader={() => fetchNews('general')}/>
       <Route path='entertainment' element={<Entertainment/>} loader={() => fetchNews('entertainment')}/>
       <Route path='sports' element={<Sports/>} loader={() => fetchNews('sports')}/>
