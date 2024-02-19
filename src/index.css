@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    @apply bg-bgHeader;
+}
+
+::-webkit-scrollbar-thumb
+{
+    @apply bg-bgNewsCard
+}
+.toTopAnimation
+{
+    animation: bottomToTop 200ms ease-in-out;
+}
+
+@keyframes bottomToTop {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(0%);
+    }
+}
