@@ -15,7 +15,7 @@ import PageNotFound from './components/Page Not Found/PageNotFound';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route  path='/news-app' element={<Root/>} errorElement={<PageNotFound/>}>
+    <Route path='/' element={<Root/>} errorElement={<PageNotFound/>}>
       <Route index element={<Home/>} loader={() => fetchNews('general')}/>
       <Route path='entertainment' element={<Entertainment/>} loader={() => fetchNews('entertainment')}/>
       <Route path='sports' element={<Sports/>} loader={() => fetchNews('sports')}/>
@@ -24,7 +24,10 @@ const router = createBrowserRouter(
       <Route path='health' element={<Health/>} loader={() => fetchNews('health')}/>
       <Route path='science' element={<Science/>} loader={() => fetchNews('science')}/>
     </Route>
-  )
+  ),
+  {
+    basename : "/news-app"
+  }
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
