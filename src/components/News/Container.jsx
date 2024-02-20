@@ -22,7 +22,7 @@ export default function Container({ loaderData, category }) {
   return (
     <div className="overflow-auto h-full m-auto p-2" id="parent">
       <InfiniteScroll
-        dataLength={data.articles.length}
+        dataLength={data?.articles.length}
         next={loadMoreData}
         hasMore={hasMore}
         loader={<p className="text-center">Loading...</p>}
