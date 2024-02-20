@@ -8,7 +8,7 @@ import Loader from "../Loader/Loader";
 export default function Container({ loaderData, category }) {
   const [data, setData] = useState(loaderData());
   const [hasMore, setHasMore] = useState(
-    !(data.articles.length == data.totalResults)
+    !(data.articles ? data.articles.length == data.totalResults : true)
   );
   let i = useRef(1);
 
