@@ -24,10 +24,7 @@ const router = createBrowserRouter(
       <Route path='health' element={<Health/>} loader={() => fetchNews('health')}/>
       <Route path='science' element={<Science/>} loader={() => fetchNews('science')}/>
     </Route>
-  ),
-  {
-    basename : "/news-app"
-  }
+  )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
